@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./List.css">
+    <title>Today's List</title>
+  </head>
+<body>
+<style>
+</style>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<a class="navbar-brand" href="#">Collabook: GMS</a>
+<button class="btn btn-dark" type="button" onclick="location.href='/portal.php';">PORTAL</button>
+</nav>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<br>
+<a href="#" class="arrow btn left" onclick="goYesterday()">&#8249; Yesterday's List</a>
+<a href="#" class="arrow btn right">Tomorrow's List &#8250;</a>
+<script>
+function goYesterday() {
+    location.replace("./listYesterday.html")
+}
+</script>
+<br>
+<div class="mid jumbotron">
+  <h1 class="display-4">Today's List:</h1>
+  <br>
+  <p class="lead">Today, you have 4 things to do.</p>
+    <hr class="my-4">
+    <div class="card">
+      <br>
+        <h4><b>Geography -</b></h4>
+        <p><b>S. Apple 5</b></p>
+        <p>Study for your test on Wednesday <b class="important">(Due Tomorrow)</b></p>
+      </div>
+    <br>
+    <div class="card">
+      <br>
+        <h4><b>Geometry -</b></h4>
+        <p><b>S. Whitsett 4</b></p>
+        <p>Complete the Triangle Proof worksheet, problems #1-14 ODD ONLY <b class="semiimportant">(Due in 2 days)</b></p>
+    </div>
+    <br>
+    <div class="card">
+      <br>
+        <h4><b>F.A.C.S. -</b></h4>
+        <p><b>M. Brown 2A</b></p>
+        <p>Get ready for your cooking project on Friday <b class="passive">(Due in 4 days)</b></p>
+
+    </div>
+    <br>
+    <div class="card">
+      <br>
+        <h4><b>Band -</b></h4>
+        <p><b>D. Apple 1</b></p>
+        <p>Get your Solo Ensemble Permission Sheet signed by next week <b class="passive">(Due in a week)</b></p>
+      </div>
+      <br>
+    <p><b>These are fake homework assignments for demonstration purposes</b></p>
+    <br>
+    <div>
+  <!-- Button trigger modal -->
+<button type="button" class="btn addB" data-toggle="modal" data-target="#exampleModal">
++ Add List Assignment
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Assignment From List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+    Class and Teacher<br>
+    <input type="text" name="classandteacher">
+    <br>
+    Period<br>
+    <input type="text" name="period">
+    <br>
+    Date Entered<br>
+    <input type="text" name="enterdate">
+    <br>
+    Date Due<br>
+    <input type="text" name="duedate">
+    <br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" value="Submit" class="btn addB">Save changes</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" class="btn addB" data-toggle="modal" data-target="#exampleModal">
++ Upload New Assignment
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Assignment From List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+    Class and Teacher<br>
+    <input type="text" name="classandteacher">
+    <br>
+    Period<br>
+    <input type="text" name="period">
+    <br>
+    Date Entered<br>
+    <input type="text" name="enterdate">
+    <br>
+    Date Due<br>
+    <input type="text" name="duedate">
+    <br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" value="Submit" class="btn addB">Save changes</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script>
+$('#myModal').modal();
+</script>
+</body>
+</html>
