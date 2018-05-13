@@ -20,15 +20,20 @@
   <li><a href="#about">About</a></li>
 </ul>
 <br>
-<a href="#" class="arrow btn left" onclick="goYesterday()">&#8249; Yesterday's List</a>
+<a href="#" class="arrow btn left" onclick="addPrevious();">&#8249; Yesterday's List</a>
 <a href="#" class="arrow btn right">Tomorrow's List &#8250;</a>
+
 <script>
-function goYesterday() {
-    location.replace("./listYesterday.html")
+function addPrevious() {
+  var parent = document.getElementById("contDay");
+  var child = document.getElementById("indDay");
+
+  parent.removeChild(child);
 }
 </script>
 <br>
-<div class="mid jumbotron">
+<div id="contDay" class="mid jumbotron">
+  <div id="indDay">
   <h1 class="display-4">Today's List:</h1>
   <br>
   <p class="lead">Today, you have 4 things to do.</p>
@@ -67,11 +72,46 @@ function goYesterday() {
     <div>
   <!-- Button trigger modal -->
 <button type="button" class="btn addB" data-toggle="modal" data-target="#exampleModal">
-+ Add List Assignment
++ Add Assignment From List
 </button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Assignment From List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <select name="cars">
+            <option value="volvo">Add New -</option>
+            <option value="saab">Lorem</option>
+            <option value="fiat">ipsum</option>
+            <option value="audi">dolor</option>
+            <option value="audi">sit</option>
+            <option value="audi">amet</option>
+            <option value="audi">consectetur</option>
+          </select>
+    <br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" value="Submit" class="btn addB">Save changes</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" class="btn addB" data-toggle="modal" data-target="#anotherModal">
++ Add New Assignment
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="anotherModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -103,42 +143,6 @@ function goYesterday() {
     </div>
   </div>
 </div>
-<button type="button" class="btn addB" data-toggle="modal" data-target="#exampleModal">
-+ Upload New Assignment
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Assignment From List</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="">
-    Class and Teacher<br>
-    <input type="text" name="classandteacher">
-    <br>
-    Period<br>
-    <input type="text" name="period">
-    <br>
-    Date Entered<br>
-    <input type="text" name="enterdate">
-    <br>
-    Date Due<br>
-    <input type="text" name="duedate">
-    <br><br>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" value="Submit" class="btn addB">Save changes</button>
-      </form>
-      </div>
-    </div>
-  </div>
 </div>
 </div>
 </div>
@@ -146,7 +150,6 @@ function goYesterday() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script>
-$('#myModal').modal();
 </script>
 </body>
 </html>
