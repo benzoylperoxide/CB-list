@@ -9,10 +9,9 @@
    width: 55%;
    border-width: 1px;
    border-radius: 3px;
-} .card {
-    margin-top: 10px;
-    padding: 2px 16px;
-    transition:0.3s;
+   margin-top: 10px;
+   padding: 2px 16px;
+   transition:0.3s;
 }.card:hover {
   transform: scaleY(0.5);
   transform: scaleY(1.03);
@@ -41,8 +40,6 @@
     background-color: #333333;
     color: white;
 }.addB {
-  margin-right: 50px;
-  margin-left: 50px;
   background-color: #666699;
   color: white;
 }.addB:hover {
@@ -51,6 +48,16 @@
 }.addB:active {
   background-color: #1f1f2e;
   color: white;
+}.upB {
+  margin-left: 50px;
+  background-color: #99ccff;
+  color: black;
+}.upB:hover {
+  background-color: #1a8cff;
+  color: white;
+}.upB:active {
+  background-color: #00264d;
+  color: black;
 }.arrow {
     background-color: #ddd;
     color: black;
